@@ -1,0 +1,97 @@
+.section-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+/* !categories start */
+.categories {
+  margin: 40px 0;
+}
+.categories .category-list {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+/* !categories end*/
+
+/* !product start */
+.products {
+  margin-bottom: 40px;
+}
+.products .product-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+/* !product end */
+
+/* !campaign start */
+.campaigns .campaigns-wrapper {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px 0;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* !campaign end */
+
+/* !blog start */
+.blogs {
+  margin-bottom: 30px;
+}
+.blogs .blog-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+/* !blog end */
+
+/* !policy start */
+
+.policy {
+  border: 1px solid #dee0ea;
+  margin-top: 40px;
+}
+.policy .policy-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 25px 0;
+}
+.policy-list .policy-item {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.policy-list .policy-item .policy-text {
+  display: flex;
+  flex-direction: column;
+}
+.policy-list .policy-item i {
+  font-size: 50px;
+  display: flex;
+}
+.policy-list .policy-item .policy-text strong {
+  font-weight: 600;
+}
+.policy-list .policy-item span {
+  font-size: 12px;
+}
+
+/* !policy end */
+
+/* !responsive */
+@media (max-width: 768px) {
+  .blogs .blog-list {
+    grid-template-columns: 1fr;
+  }
+  .policy .policy-list {
+    flex-direction: column;
+  }
+}

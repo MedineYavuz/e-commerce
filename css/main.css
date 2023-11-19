@@ -1,0 +1,39 @@
+/* ! global css : bütün css klasörlerini importla çağırıyoruz*/
+@import url(base.css);
+
+/* !layout */
+@import url(layout/header.css);
+
+/* !components */
+@import url(components/modal-search.css);
+@import url(components/slider.css);
+@import url(components/single-product/breadcrumb.css);
+@import url(components/single-product/product-gallery.css);
+
+/* !pages */
+@import url(pages/home.css);
+@import url(pages/contact.css);
+@import url(pages/account.css);
+@import url(pages/cart.css);
+@import url(pages/single-product.css);
+
+/* !category */
+@import url(components/category-item.css);
+
+/* !product item */
+@import url(components/product-item.css);
+
+/* ! campaign */
+@import url(components/campaign-item.css);
+
+/* !blog */
+@import url(components/blog-item.css);
+
+/* !brand */
+@import url(components/brand-item.css);
+
+/* !campaign-single */
+@import url(components/campaign-single.css);
+
+/* !footer */
+@import url(layout/footer.css);
