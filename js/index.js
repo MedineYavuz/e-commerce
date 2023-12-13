@@ -25,4 +25,11 @@ getData();
 const products = localStorage.getItem("products");
 console.log(JSON.parse(products));
 
+const cartItems = document.querySelector(".header-cart-count");
+
+cartItems.innerHTML = localStorage.getItem("cart")
+  ? JSON.parse(localStorage.getItem("cart")).length
+  : "0";
+
+
 

@@ -1,6 +1,65 @@
 import { product1 } from "./glide.js";
 
 let products = [];
+let cart =[];
+
+cart = localStorage.getItem("cart")
+  ? JSON.parse(localStorage.getItem("cart"))
+  : [];
+
+function addToCart() {
+
+  const cartItems = document.querySelector(".header-cart-count");
+  const buttons = [...document.getElementsByClassName("add-to-cart")];
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+      const id = e.target.dataset.id;
+      const findProduct = products.find((product) => product.id === Number(id));
+      console.log(findProduct);
+      cart.push({ ...findProduct, quantity: 1 });
+      localStorage.setItem("cart", JSON.stringify(cart));
+    });
+
+    const inCart = cart.find((item) => item.id === Number(button.dataset.id));
+    if (inCart) {
+      button.setAttribute("disabled", "disabled");
+    }else {
+      button.addEventListener("click", function (e) {
+        e.preventDefault();
+        const id = e.target.dataset.id;
+        const findProduct = products.find(
+          (product) => product.id === Number(id)
+        );
+        cart.push({ ...findProduct, quantity: 1 });
+        localStorage.setItem("cart", JSON.stringify(cart));
+        button.setAttribute("disabled", "disabled");
+        cartItems.innerHTML = cart.length;
+        
+      });
+    }
+    
+   
+   
+   
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+      const id = e.target.dataset.id;
+      const findProduct = products.find(
+        (product) => product.id === Number(id)
+        );
+      cart.push({ ...findProduct, quantity: 1 });
+      localStorage.setItem("cart", JSON.stringify(cart));
+    });
+
+   
+   
+
+  });
+}
+
+
 
 async function productsFunc() {
  products = await localStorage.getItem("products") ? JSON.parse(localStorage.getItem("products")): [];
@@ -53,7 +112,7 @@ products.forEach((item) => {
                   </div>
                   <span class="product-discount">-${item.discount}%</span>
                   <div class="product-links">
-                    <button>
+                    <button class="add-to-cart" data-id=${item.id}>
                       <i class="bi bi-basket-fill"></i>
                     </button>
                     <button>
@@ -70,6 +129,7 @@ products.forEach((item) => {
               </li>
     `;
     productsContainer.innerHTML=results;
+    addToCart(item);
    
    
 });
