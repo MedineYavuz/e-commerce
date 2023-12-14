@@ -28,12 +28,12 @@
         <div class="container">
           <div class="header-wrapper">
             <div class="header-mobile">
-              <i class="bi bi-list"></i>
+              <i class="bi bi-list" id="btn-menu"></i>
             </div>
             <div class="header-left">
               <a href="#" class="logo">LOGO</a>
             </div>
-            <div class="header-center">
+            <div class="header-center" id="sidebar">
               <nav class="navigation">
                 <ul class="menu-list">
                   <li class="menu-list-item">
@@ -183,7 +183,7 @@
                   </li>
                 </ul>
               </nav>
-              <i class="bi-x-circle"></i>
+              <i class="bi-x-circle" id="close-sidebar"></i>
             </div>
             <div class="header-right">
               <div class="header-right-links">
@@ -195,7 +195,7 @@
                 </button>
                 <a href="#"><i class="bi bi-heart"></i></a>
                 <div class="header-cart">
-                  <a href="#" class="header-cart-link">
+                  <a href="cart.html" class="header-cart-link">
                     <i class="bi bi-bag"></i>
                     <span class="header-cart-count">0</span>
                   </a>
@@ -252,7 +252,7 @@
             </a>
           </div>
         </div>
-        <i class="bi bi-x-circle"></i>
+        <i class="bi bi-x-circle" id="close-search"></i>
       </div>
     </div>
     <!-- Modal search end -->
@@ -280,30 +280,7 @@
                   <th class="product-quantity">Quantity</th>
                   <th class="product-subtotal">Subtotal</th>
                 </thead>
-                <tbody class="cart-wrapper">
-                  <tr class="cart-item">
-                    <td></td>
-                    <td class="cart-image">
-                      <img src="img/products/product1/1.png" alt="" />
-                      <i class="bi bi-x delete-cart"></i>
-                    </td>
-                    <td>Analogue Resin Strap</td>
-                    <td>$108.00</td>
-                    <td style="text-align: center">1</td>
-                    <td style="text-align: center">$100.00</td>
-                  </tr>
-                  <tr class="cart-item">
-                    <td></td>
-                    <td class="cart-image">
-                      <img src="img/products/product2/1.png" alt="" />
-                      <i class="bi bi-x delete-cart"></i>
-                    </td>
-                    <td>Ridley High Waist</td>
-                    <td>$108.00</td>
-                    <td style="text-align: center">1</td>
-                    <td style="text-align: center">$100.00</td>
-                  </tr>
-                </tbody>
+                <tbody class="cart-wrapper"></tbody>
               </table>
               <div class="actions-wrapper">
                 <div class="coupon">
@@ -594,5 +571,8 @@
       </div>
     </footer>
     <!-- footer end -->
+
+    <script src="js/index.js" type="module"></script>
+    <script src="js/cart.js" type="module"></script>
   </body>
 </html>
