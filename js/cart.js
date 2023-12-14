@@ -20,9 +20,9 @@ function displayCartProduct(){
                  <i class="bi bi-x delete-cart" data-id=${item.id}></i>
             </td>
             <td>${item.name}</td>
-            <td>${item.price.newPrice}</td>
+            <td>${item.price.newPrice.toFixed(2)}</td>
             <td style="text-align: center">${item.quantity}</td>
-            <td style="text-align: center">$100.00</td>
+            <td style="text-align: center">${(item.price.newPrice * item.quantity).toFixed(2)}</td>
         </tr>`
     });
 
@@ -49,6 +49,36 @@ function removeCartItem (){
             localStorage.setItem("cart",JSON.stringify(cart));
 
             cartItems.innerHTML = cart.length;
+
+            saveCartValues();
         })
     })
 }
+
+//cart fiyat hesaplama:
+
+function saveCartValues(){
+    const cartTotal = document.getElementById("cart-total");
+    const subtotal = document.getElementById("subtotal");
+    const fastCargo = document.getElementById("fast-cargo");
+
+let itemsTotal = 0;
+cart.length >0 && cart.map((item) => (itemsTotal += item.price.newPrice * item.quantity));
+
+subtotal.innerHTML= `$${itemsTotal.toFixed(2)}`;
+cartTotal.innerHTML= `$${itemsTotal.toFixed(2)}`;
+const fastCargoPrice = 15;
+fastCargo.addEventListener("change",function(e){
+    if(e.target.checked){
+        cartTotal.innerHTML = `$${(itemsTotal + fastCargoPrice).toFixed(2)}`;
+    }else{
+        cartTotal.innerHTML = `$${itemsTotal.toFixed(2)}`;
+
+    }
+});
+
+
+}
+
+saveCartValues();
+
