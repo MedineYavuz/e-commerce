@@ -10,7 +10,7 @@ import productsFunc from "./product.js"
 
 
 
-// add product to local storage
+// add product to local storage start
 
 async function getData() {
     const photos = await fetch("../js/data.json");
@@ -18,12 +18,14 @@ async function getData() {
 
    data ? localStorage.setItem("products",JSON.stringify(data)) : [];
 
+   productsFunc();
+
 
 }
 getData();
 
-const products = localStorage.getItem("products");
-console.log(JSON.parse(products));
+// add product to local storage end
+
 
 const cartItems = document.querySelector(".header-cart-count");
 
