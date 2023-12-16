@@ -40,3 +40,22 @@ const config2 = {
 };
 
 productsContainer && new Glide('.product-carousel2',config2).mount();
+
+const config3 = {
+  
+    perView: 3,
+    autoplay:3000,
+    breakpoints: {
+        992: {
+            perView: 3,
+        },
+        768: {
+            perView: 2,
+        },
+        576: {
+            perView: 1,
+        },
+    },
+};
+
+new Glide('.product-thumb',config3).mount();
