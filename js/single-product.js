@@ -1,3 +1,7 @@
+import { thumbsActiveFunc } from "./single-product/thumbsActive.js";
+import zoomFunc from "./single-product/zoom.js"
+
+thumbsActiveFunc()
 
 const productId = localStorage.getItem("productId") ? JSON.parse(localStorage.getItem("productId")) : localStorage.setItem("productId",JSON.stringify(1));
 
