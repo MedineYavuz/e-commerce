@@ -1,9 +1,13 @@
 export function thumbsActiveFunc(){
-    const thumbs = document.querySelectorAll("gallery-thumbs .glide__slide")
+    const thumbs = document.querySelectorAll("gallery-thumbs .img-fluid");
+
+    const singleImage = document.querySelector("#single-image");
+
+    console.log(thumbs);
 
     thumbs.forEach((item)=>{
         item.addEventListener("click",function(){
-            console.log("click");
+            singleImage.src = item.src;
         })
     })
 }
