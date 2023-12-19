@@ -20,6 +20,12 @@
 .single-tabs .tab-panel-desc {
   font-size: 14px;
 }
+.single-tabs .content {
+  display: none;
+}
+.single-tabs .content.active {
+  display: block;
+}
 
 .single-tabs .tab-panel-info table {
   width: 100%;

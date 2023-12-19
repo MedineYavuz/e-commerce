@@ -3,6 +3,8 @@ import zoomFunc from "./single-product/zoom.js"
 import { singleThumbs } from "./glide.js";
 import colorsFunc from "./single-product/color.js"
 import valuesFunc from "./single-product/values.js"
+import tabsFunc from "./single-product/tabs.js"
+
 
 
 

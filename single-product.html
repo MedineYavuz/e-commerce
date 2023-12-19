@@ -427,17 +427,21 @@
           <div class="single-tabs">
             <ul class="tab-list">
               <li>
-                <a href="#" class="tab-button active">Description</a>
+                <a href="#" class="tab-button active" data-id="desc"
+                  >Description</a
+                >
               </li>
               <li>
-                <a href="#" class="tab-button">Additional information</a>
+                <a href="#" class="tab-button" data-id="info"
+                  >Additional information</a
+                >
               </li>
               <li>
-                <a href="#" class="tab-button">Reviews</a>
+                <a href="#" class="tab-button" data-id="reviews">Reviews</a>
               </li>
             </ul>
             <div class="tab-panel">
-              <div class="tab-panel-desc">
+              <div class="tab-panel-desc content active" id="desc">
                 <p>
                   Quisque varius diam vel metus mattis, id aliquam diam rhoncus.
                   Proin vitae magna in dui finibus malesuada et at nulla. Morbi
@@ -460,7 +464,7 @@
                   vel ornare vel, dignissim a tortor.
                 </p>
               </div>
-              <div class="tab-panel-info">
+              <div class="tab-panel-info content" id="info">
                 <h3>Additional information</h3>
                 <table>
                   <tbody>
@@ -482,7 +486,7 @@
                   </tbody>
                 </table>
               </div>
-              <div class="tab-panel-reviews">
+              <div class="tab-panel-reviews content" id="reviews">
                 <h3>
                   2 reviews for Basic Colored Sweatpants With Elastic Hems
                 </h3>
