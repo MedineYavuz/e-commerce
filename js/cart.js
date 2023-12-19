@@ -22,7 +22,7 @@ function displayCartProduct(){
             <td>${item.name}</td>
             <td>${item.price.newPrice.toFixed(2)}</td>
             <td style="text-align: center">${item.quantity}</td>
-            <td style="text-align: center">${(item.price.newPrice * item.quantity).toFixed(2)}</td>
+            <td style="text-align: center">$${(item.price.newPrice * item.quantity).toFixed(2)}</td>
         </tr>`
     });
 
