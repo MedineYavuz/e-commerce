@@ -4,6 +4,8 @@ import { singleThumbs } from "./glide.js";
 import colorsFunc from "./single-product/color.js"
 import valuesFunc from "./single-product/values.js"
 import tabsFunc from "./single-product/tabs.js"
+import commentFunc from "./single-product/comments.js"
+
 
 
 

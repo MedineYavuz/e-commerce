@@ -67,10 +67,15 @@
 .tab-panel-reviews .comment-form-rating .stars a:last-child {
   border-right: unset;
 }
+.tab-panel-reviews .comment-form-rating .star.active i {
+  color: gold;
+}
+
 .tab-panel-reviews .comment-form-rating .stars a:hover i {
   color: gold;
   transition: 0.2s ease color;
 }
+
 .tab-panel-reviews .comment-form-rating .stars i {
   font-size: 10px;
   color: #dee0ea;
