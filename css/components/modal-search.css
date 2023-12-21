@@ -91,7 +91,7 @@
   grid-template-columns: 1fr 1fr;
   border-left: 1px solid #dee0ea;
 }
-.modal-search .results .result-item {
+.modal-search .result-item {
   display: flex;
   column-gap: 15px;
   align-items: center;

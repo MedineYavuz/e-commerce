@@ -3,7 +3,8 @@ import Header from "./header.js";
 
 Header();
 
-import productsFunc from "./product.js"
+import productsFunc from "./product.js";
+import searchFunc from "./search.js";
 
 
 //?--------------------------------------------
@@ -19,6 +20,7 @@ async function getData() {
    data ? localStorage.setItem("products",JSON.stringify(data)) : [];
 
    productsFunc();
+   searchFunc(data);
 
 
 }
