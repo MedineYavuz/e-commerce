@@ -19,6 +19,19 @@ function productRoute(){
 }
 
 function searchFunc(products){
+
+//   let modalWrapper= document.querySelector("modal-wrapper");
+// let modalSearch= document.querySelector("modal-search");
+
+
+ 
+// document.addEventListener("click", (e)=> {
+//   if(!e.composedPath().includes(modalWrapper)){
+//     modalSearch.style.visibility ="visible";
+//     modalSearch.style.opacity ="1";
+//   }
+// });
+
     const searchWrapperDOM= document.querySelector(".search-results .results");
 
     let result = "";
@@ -66,6 +79,8 @@ function searchFunc(products){
     })
   
 };
+
+
 
 
 
