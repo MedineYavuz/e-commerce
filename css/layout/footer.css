@@ -93,6 +93,9 @@
   flex-direction: column;
   row-gap: 5px;
 }
+.footer-widgets .widget-nav-menu ul li a:hover {
+  opacity: 0.5;
+}
 
 /* !widgets end*/
 
