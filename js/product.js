@@ -1,8 +1,5 @@
 import { product1 } from "./glide.js";
 
-let products = localStorage.getItem("products")
-  ? JSON.parse(localStorage.getItem("products"))
-  : [];
 
  let cart = localStorage.getItem("cart")
 ? JSON.parse(localStorage.getItem("cart"))
@@ -57,7 +54,7 @@ function productRoute(){
 
 
 
- function productsFunc() {
+ function productsFunc(products) {
 
 
 const productsContainer =document.getElementById("product-list");

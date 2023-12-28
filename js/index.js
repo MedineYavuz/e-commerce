@@ -19,7 +19,7 @@ async function getData() {
 
    data ? localStorage.setItem("products",JSON.stringify(data)) : [];
 
-   productsFunc();
+   productsFunc(data);
    searchFunc(data);
 
 
